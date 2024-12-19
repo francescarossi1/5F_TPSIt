@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket</title>
+    <!-- Link al foglio di stile esterno -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link a Bootstrap CSS per layout e stili -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
+</head>
+<body>
+
+    <!-- Barra di navigazione -->
+    <div class="navbar sticky-top">
+        <a href="index.html">Home</a>
+        <a href="introduzione.html">Introduzione</a>
+        <a href="isoOsi.html">Pila Iso Osi e livello di trasporto</a>
+        <a href="tcpUdp.html">TCP e UDP</a>
+        <a href="glossario.html">Glossario</a>
+    </div>
+
+    <!-- Sezione contenuti -->
+    <div class="contenuto">
+        
+        <!-- Sezione Pila ISO-OSI -->
+        <div class="home">
+            <div class="definizione">
+                <h1>Pila ISO-OSI</h1>
+                <!-- Descrizione del modello ISO-OSI -->
+                <div class="container">
+                    <div class="text">
+                        <strong>DEFINIZIONE</strong>
+                        <p>E' un modello concettuale che descrive come le comunicazioni tra sistemi di rete devono avvenire in modo strutturato e standardizzato.</p>
+                    </div>
+                </div>
+                <!-- Strati della Pila ISO-OSI -->
+                <div class="alerts-container">
+                    <div class="alert alert-primary" role="alert">7 Applicazione</div>
+                    <div class="alert alert-secondary" role="alert">6 Presentazione</div>
+                    <div class="alert alert-success" role="alert">5 Sessione</div>
+                    <div class="alert alert-danger" role="alert">4 Trasporto</div>
+                    <div class="alert alert-warning" role="alert">3 Rete</div>
+                    <div class="alert alert-info" role="alert">2 Collegamento</div>
+                    <div class="alert alert-dark" role="alert">1 Fisico</div>
+                </div>
+            </div>
+
+            <!-- Sezione Pila TCP-IP -->
+            <div class="definizione">
+                <h1>Pila TCP-IP</h1>
+                <div class="container">
+                    <div class="text">
+                        <strong>DEFINIZIONE</strong>
+                        <p>Transmission Control Protocol/Internet Protocol è un modello di riferimento simile al modello ISO/OSI, ma con meno strati. Viene utilizzato per gestire la comunicazione tra dispositivi in una rete, in particolare su Internet.</p>
+                    </div>
+                </div>
+                <!-- Strati della Pila TCP-IP -->
+                <div class="alerts-container">
+                    <div class="alert alert-success" role="alert">5 Applicazione</div>
+                    <div class="alert alert-danger" role="alert">4 Trasporto</div>
+                    <div class="alert alert-warning" role="alert">3 Rete</div>
+                    <div class="alert alert-info" role="alert">2 Collegamento</div>
+                    <div class="alert alert-dark" role="alert">1 Fisico</div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+            <!-- Sezione sul livello di trasporto -->
+             <div class="contenuto">
+            <h2>Livello di trasporto</h2>
+            <h3>Layer 4</h3>
+            <p>Ha il compito di fornire il trasferimento affidabile dei dati tra gli host sorgente e destinazione all'interno di una rete. Gestisce principalmente i problemi di controllo degli errori, di sequenza e di flusso.</p>
+            <a href="glossario.html">Glossario dei termini</a>
+       
+    </div>
+
+    <!-- Footer con informazioni sul creatore -->
+    <footer class="text-dark text-center py-3 mt-5">
+        <p class="mb-0">Francesca Rossi - Classe 5F</p>
+    </footer>
+
+    <!-- Script per Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

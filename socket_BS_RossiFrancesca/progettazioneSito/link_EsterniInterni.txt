@@ -1,0 +1,10 @@
+LINK ESTERNI: 
+
+DOCUMENTAZIONE TCP: 
+https://www.ietf.org/rfc/rfc793.txt
+
+DOCUMENTAZIONE UDP:
+https://datatracker.ietf.org/doc/html/rfc768
+
+LINK INTERNI: 
+collegamenti tra le pagine 

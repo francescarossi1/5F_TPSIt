@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket</title>
+    <!-- Link al foglio di stile esterno -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link a Bootstrap CSS per layout e componenti -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Barra di navigazione -->
+    <div class="navbar sticky-top">
+        <a href="index.html">Home</a>
+        <a href="introduzione.html">Introduzione</a>
+        <a href="isoOsi.html">Pila Iso Osi e livello di trasporto</a>
+        <a href="tcpUdp.html">TCP e UDP</a>
+        <a href="glossario.html">Glossario</a>
+    </div>
+    
+    <!-- Sezione contenuti -->
+    <div class="contenuto">
+        <div class="home">   
+            <!-- Descrizione della socket -->
+            <div class="definizione">
+                <h1>TCP e UDP</h1>
+                <p>Una socket è un'interfaccia di comunicazione che consente lo scambio di dati tra dispositivi attraverso una rete...</p>
+            </div>
+        </div>
+
+        <!-- Titolo dell'intestazione -->
+        <header class="intestazione">
+            <h1>Protocollo TCP e UDP: </h1>
+            <h2> Caratteristiche e Differenze</h2>
+        </header>
+
+        <!-- Sezione TCP -->
+        <div class="contenuto-box">
+            <h2 class="section-title">TCP (Transmission Control Protocol)</h2>
+            <img src="img/tcp.png" alt="Protocollo TCP" class="tcp-image">
+            <p>Il <span class="highlight">TCP</span> è un protocollo orientato alla connessione...</p>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Affidabilità:</strong> Garantisce la consegna senza errori.</li>
+                <li class="list-group-item"><strong>Pipelining:</strong> Gestisce la trasmissione per migliorare l'efficienza.</li>
+                <li class="list-group-item"><strong>Controllo di flusso:</strong> Adatta la velocità di trasmissione.</li>
+                <li class="list-group-item"><strong>Three-way Handshake:</strong> Connessione tramite SYN e ACK.</li>
+                <li class="list-group-item"><strong>Chiusura della connessione:</strong> Usa il Four-way Handshake.</li>
+            </ul>
+            <h3>Segmenti TCP</h3>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Sliding Window:</strong> Regola la dimensione dei dati trasmessi.</li>
+                <li class="list-group-item"><strong>Checksum:</strong> Verifica l'integrità dei dati.</li>
+                <li class="list-group-item"><strong>Flags:</strong> Gestisce la connessione tramite i flag SYN, ACK, FIN.</li>
+                <li class="list-group-item"><strong>MSS:</strong> Determina la dimensione massima dei segmenti.</li>
+            </ul>
+            <h3>Problemi del TCP</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Duplicazione a causa di conflitti nei numeri di sequenza.</li>
+                <li class="list-group-item">Ritardi o perdita di pacchetti per time-out e ritrasmissioni.</li>
+                <li class="list-group-item">Possibile fallimento nel rilascio della connessione.</li>
+            </ul>
+            <a href="https://www.ietf.org/rfc/rfc793.txt">Leggi la documentazione</a>
+        </div>
+
+        <!-- Sezione UDP -->
+        <div class="content-box">
+            <h2 class="section-title">UDP (User Datagram Protocol)</h2>
+            <img src="img/udp.png" alt="Protocollo UDP" class="udp-image">
+            <p>L'<span class="highlight">UDP</span> è un protocollo connectionless, che non garantisce la consegna o l'ordine dei pacchetti...</p>
+            <ul class="list-group list-group-numbered">
+                <li class="list-group-item">Non garantisce la consegna dei pacchetti.</li>
+                <li class="list-group-item">I pacchetti possono arrivare fuori ordine.</li>
+                <li class="list-group-item">Non esegue ritrasmissioni in caso di pacchetti persi.</li>
+                <li class="list-group-item">Vulnerabile agli attacchi DDoS.</li>
+            </ul>
+            <h3>Problemi dell'UDP</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Non garantisce il controllo degli errori.</li>
+                <li class="list-group-item">Pacchetti potrebbero arrivare fuori ordine.</li>
+                <li class="list-group-item">Non ritrasmette pacchetti persi.</li>
+            </ul>
+            <a href="https://datatracker.ietf.org/doc/html/rfc768">Leggi la documentazione</a>
+            <br>
+            <a href="glossario.html">Glossario dei termini</a>
+        </div>
+    </div>
+
+    <!-- Footer con informazioni sul creatore -->
+    <footer class="text-dark text-center py-3 mt-5">
+        <p class="mb-0">Francesca Rossi - Classe 5F</p>
+    </footer>
+
+    <!-- Script per Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Socket</title> <!-- Titolo della pagina -->
+    <link rel="stylesheet" href="style.css"> <!-- Link al foglio di stile personalizzato -->
+    <!-- Link a Bootstrap per la formattazione della pagina -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
+</head>
+<body>
+
+    <!-- Barra di navigazione con link a diverse pagine -->
+    <div class="navbar sticky-top">
+        <a href="index.html">Home</a>
+        <a href="introduzione.html">Introduzione</a>
+        <a href="isoOsi.html">Pila Iso Osi e livello di trasporto</a>
+        <a href="tcpUdp.html">TCP e UDP</a>
+        <a href="glossario.html">Glossario</a>
+    </div>
+
+    <div class="contenuto">
+        <!-- Sezione di definizione del termine "Socket" -->
+        <div class="home">
+            <div class="definizione">
+                <h1>SOCKET</h1>
+                <p>Una socket è un'interfaccia di comunicazione per lo scambio di dati tra dispositivi attraverso una rete.</p>
+            </div>
+
+            <!-- Immagine relativa al concetto di client-server -->
+            <img src="img/client-server.png" alt="client-server" class="cl-sr">
+        </div>
+
+        <!-- Carousel di immagini -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/pila.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/connessione.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/tcp.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/udp.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+
+        <!-- Controlli per il carousel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Sezione collegamenti tra le pagine -->
+    <div class="collegamenti">
+        <h2> Naviga tra le pagine</h2>
+        <div class="accordion" id="accordionExample">
+            <!-- Accordion per i vari argomenti -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong>Introduzione</strong>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Introduzione alle Socket con un esempio.</p>
+                        <a href="introduzione.html">Scopri di più</a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <strong>Pila Iso-Osi e il livello di trasporto</strong>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Descrizione della pila Iso-Osi e del livello di trasporto.</p>
+                        <a href="isoOsi.html">Scopri di più</a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>TCP e UDP</strong>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Differenze tra TCP e UDP.</p>
+                        <a href="tcpUdp.html">Scopri di più</a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <strong>Glossario</strong>
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Definizioni dei termini informatici.</p>
+                        <a href="glossario.html">Scopri di più</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer della pagina -->
+    <footer class=" text-dark text-center py-3 mt-5">
+        <p class="mb-0">Francesca Rossi - Classe 5F</p>
+    </footer>
+
+    <!-- Inclusione di Popper.js e Bootstrap per funzionalità aggiuntive -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> <!-- Script di Bootstrap -->
+  </body>
+</html>

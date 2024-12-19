@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket</title>
+    <!-- Link al foglio di stile esterno -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS per il layout e gli stili -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
+</head>
+<body>
+
+    <!-- Barra di navigazione -->
+    <div class="navbar sticky-top">
+        <a href="index.html">Home</a>
+        <a href="introduzione.html">Introduzione</a>
+        <a href="isoOsi.html">Pila Iso Osi e livello di trasporto</a>
+        <a href="tcpUdp.html">TCP e UDP</a>
+        <a href="glossario.html">Glossario</a>
+    </div>
+
+    <!-- Sezione contenuti -->
+    <div class="contenuto">
+        <div class="home">
+            <!-- Sezione definizione di Socket -->
+            <div class="definizione">
+                <h1>Socket</h1>
+                <p>Una socket è un'interfaccia di comunicazione tra 2 o più macchine...</p>
+                <p>Le socket sono utilizzate per creare connessioni tra client e server...</p>
+                <h2>Famiglie di Socket</h2>
+                <ul>
+                    <li><strong>AF_INET</strong>: comunicazione tra host remoti...</li>
+                    <li><strong>AF_UNIX</strong>: comunicazione tra processi locali...</li>
+                </ul>
+                <h2>Tipi di Socket</h2>
+                <ul>
+                    <li><strong>Stream socket</strong>: orientati alla connessione (TCP)...</li>
+                    <li><strong>Datagram socket</strong>: non orientati alla connessione (UDP)...</li>
+                    <li><strong>Raw socket</strong>: bypassa il livello di trasporto...</li>
+                </ul>
+                <!-- Immagine rappresentativa -->
+                <img src="img/client-server.png" alt="client-server" class="cl-sr">
+            </div>
+        </div>
+
+        <!-- Sezione per descrivere i tipi di socket (SOCK_STREAM e SOCK_DGRAM) -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>SOCK_STREAM</h2>
+                    <p>Utilizza il protocollo <strong>TCP</strong>. La connessione è affidabile...</p>
+                </div>
+                <div class="col">
+                    <h2>SOCK_DGRAM</h2>
+                    <p>Utilizza il protocollo <strong>UDP</strong>. La connessione non è affidabile...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sezione esempio connessione server-client con immagini -->
+        <h4 class="home">Esempio connessione server-client</h4>
+        <p class="home">Il codice del programma è stato realizzato con il linguaggio C.</p>
+        <div class="connection">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="img/server.png" class="img-fluid" alt="Server">
+                </div>
+                <div class="col-md-6">
+                    <img src="img/client.png" class="img-fluid" alt="Client">
+                </div>
+            </div>
+        </div>
+        <a href="glossario.html">Glossario dei termini</a>
+    </div>
+
+    <!-- Footer con informazioni sul creatore -->
+    <footer class="text-dark text-center py-3 mt-5">
+        <p class="mb-0">Francesca Rossi - Classe 5F</p>
+    </footer>
+
+    <!-- Script per Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
