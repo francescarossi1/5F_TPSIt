@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titolo della pagina -->
+    <title>Domande a Crocette</title>
+    <!-- Collega il foglio di stile esterno -->
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <header>
+        <!-- Titolo del test e visualizzazione del timer -->
+        <h1 id="test-title">Testo</h1>
+        <div id="timer">Tempo: 00:00:00</div>
+    </header>
+    <main>
+        <!-- Contenitore per il contenuto dinamico del test -->
+        <div id="test-content" class="test-container">
+            <!-- Il contenuto delle domande a crocette sarà inserito dinamicamente -->
+        </div>
+    </main>
+    <footer>
+        <!-- Navigazione con link per tornare alla home o passare a un altro testo -->
+        <div class="menu">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="crocetta.html?testo=1" class="nav-button">Testo 1</a>
+            <a href="crocetta.html?testo=2" class="nav-button">Testo 2</a>
+        </div>
+    </footer>
+     <!-- Collega lo script esterno con defer per caricarlo dopo il rendering della pagina -->
+     <script defer src="script.js"></script>
+</body>
+</html>
+

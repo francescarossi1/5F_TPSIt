@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interattivo</title>
+    <!-- Collega il foglio di stile esterno -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Titolo del quiz e visualizzazione del timer -->
+        <h1>Quiz Interattivo</h1>
+        <div id="timer">Tempo: 00:00:00</div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="left">
+                <!-- Sezione con domande aperte -->
+                <h2>Domande Aperte</h2>
+                <div class="box"><a href="domandaAperta.html?domanda=1">Domanda 1</a></div>
+                <div class="box"><a href="domandaAperta.html?domanda=2">Domanda 2</a></div>
+                <div class="box"><a href="domandaAperta.html?domanda=3">Domanda 3</a></div>
+            </section>
+            <section class="right">
+                <!-- Sezione con domande a crocette -->
+                <h2>Testi con Domande a Crocette</h2>
+                <div class="box"><a href="crocetta.html?testo=1" class="question-box">Testo 1</a></div>
+                <div class="box"><a href="crocetta.html?testo=2" class="question-box">Testo 2</a></div>
+                <!-- Pulsante per inviare le risposte -->
+                <button id="submit-answers">Invia Risposte</button>
+            </section>
+        </div>
+    </main>
+    <!-- Collega lo script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+

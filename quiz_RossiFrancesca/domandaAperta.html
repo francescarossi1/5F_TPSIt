@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titolo della pagina -->
+    <title>Domanda Aperta</title>
+    <!-- Collega il foglio di stile esterno -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Titolo della domanda e visualizzazione del timer -->
+        <h1 id="question-title">Domanda</h1>
+        <div id="timer">Tempo: 00:00:00</div>
+    </header>
+    <main>
+        <!-- Contenitore per la domanda e la risposta -->
+        <div class="question-container">
+            <!-- Testo della domanda -->
+            <h2 id="question-text"></h2>
+            <!-- Area di testo per inserire la risposta -->
+            <textarea id="answer" rows="10" placeholder="Scrivi qui la tua risposta..."></textarea>
+            <!-- Conteggio delle parole scritte -->
+            <p id="word-count">Parole scritte: 0</p>
+        </div>
+    </main>
+    <footer>
+        <!-- Navigazione con link per tornare alla home o passare ad altre domande -->
+        <div class="menu">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="domandaAperta.html?domanda=1" class="nav-button">Domanda 1</a>
+            <a href="domandaAperta.html?domanda=2" class="nav-button">Domanda 2</a>
+            <a href="domandaAperta.html?domanda=3" class="nav-button">Domanda 3</a>
+        </div>
+    </footer>
+     <!-- Collega lo script esterno con defer per caricarlo dopo il rendering della pagina -->
+     <script defer src="script.js"></script>
+</body>
+</html>
+
+

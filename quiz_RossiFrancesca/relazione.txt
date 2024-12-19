@@ -1,0 +1,9 @@
+Sito Web per un Quiz Interattivo
+
+Il sito ospita un test interattivo sull'informatica. La Home Page è strutturata con due sezioni principali: a sinistra, tre collegamenti a domande aperte; a destra, due testi con 5 domande a scelta multipla.
+
+Ogni volta che una risposta viene inserita, essa viene salvata. Nelle domande aperte, viene conteggiato il numero di parole scritte. Il sito include anche un timer che registra il tempo impiegato per completare il quiz. Quando si inviano le risposte, il timer si resetta e le risposte precedenti vengono cancellate.
+
+Premendo il pulsante Invia Risposte, viene creato un file di testo che raccoglie le risposte fornite insieme al tempo trascorso.
+
+

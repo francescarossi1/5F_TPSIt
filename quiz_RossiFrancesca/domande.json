@@ -1,0 +1,72 @@
+{ 
+    "domandeAperte": {
+      "1": "Che cos'è un algoritmo?",
+      "2": "Qual è la differenza tra hardware e software?",
+      "3": "Spiega il concetto di programmazione orientata agli oggetti."
+    },
+    "testi": {
+      "1": {
+        "titolo": "Fondamenti di Informatica",
+        "testo": "Questo testo descrive i concetti fondamentali dell'informatica...",
+        "domande": [
+          {
+            "id": "1_1",
+            "domanda": "Che cos'è un bit?",
+            "opzioni": ["Unità di memoria", "Unità di misura", "Un dato binario", "Un componente hardware"]
+          },
+          {
+            "id": "1_2",
+            "domanda": "Che cos'è un byte?",
+            "opzioni": ["8 bit", "Una parola", "Un'unità logica", "Un registro"]
+          },
+          {
+            "id": "1_3",
+            "domanda": "Quale linguaggio è considerato di basso livello?",
+            "opzioni": ["Assembly", "Python", "Java", "C#"]
+          },
+          {
+            "id": "1_4",
+            "domanda": "Che cosa rappresenta il termine 'CPU'?",
+            "opzioni": ["Central Processing Unit", "Unità di Controllo", "Memoria Principale", "Disco Rigido"]
+          },
+          {
+            "id": "1_5",
+            "domanda": "Qual è il compito della RAM?",
+            "opzioni": ["Memorizzare dati temporaneamente", "Archiviare dati a lungo termine", "Processare dati", "Gestire dispositivi di input/output"]
+          }
+        ]
+      },
+      "2": {
+        "titolo": "Sistemi Operativi",
+        "testo": "Questo testo descrive i principali sistemi operativi e il loro ruolo...",
+        "domande": [
+          {
+            "id": "2_1",
+            "domanda": "Qual è la funzione principale di un sistema operativo?",
+            "opzioni": ["Gestire le risorse hardware", "Creare software", "Fornire applicazioni preinstallate", "Compilare codice"]
+          },
+          {
+            "id": "2_2",
+            "domanda": "Quale dei seguenti è un sistema operativo?",
+            "opzioni": ["Linux", "Python", "HTML", "Oracle"]
+          },
+          {
+            "id": "2_3",
+            "domanda": "Che cos'è un processo?",
+            "opzioni": ["Un programma in esecuzione", "Un file salvato su disco", "Un'unità hardware", "Un comando del terminale"]
+          },
+          {
+            "id": "2_4",
+            "domanda": "Qual è il ruolo del kernel?",
+            "opzioni": ["Gestire l'hardware e le risorse di sistema", "Creare interfacce grafiche", "Memorizzare dati", "Gestire periferiche esterne"]
+          },
+          {
+            "id": "2_5",
+            "domanda": "Che cosa rappresenta l'acronimo 'GUI'?",
+            "opzioni": ["Graphical User Interface", "General User Input", "Guided User Interaction", "Graphical Utility Interface"]
+          }
+        ]
+      }
+    }
+  }
+  
