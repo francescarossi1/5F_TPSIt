@@ -1,0 +1,19 @@
+PROGETTAZIONE: 
+
+Socket:
+definizione e spiegazione, tipologie (stream, dgram), comunicazione tra server e client con un esempio.
+
+Pila ISO-OSI: 
+definizione e come è composta.
+
+Pila TCP-IP: 
+definizione e come è composta.
+
+Livello 4 di trasporto:
+di cosa si occupa e definizione. 
+
+TCP e UDP: 
+definizione, caratteristiche, problemi, differenze. 
+
+Glossario dei termini: 
+socket, client e server, tcp e udp. 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title"></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Barra di navigazione -->
+    <div class="navbar sticky-top" id="navbar"></div>
+
+    <!-- Sezione contenuti -->
+    <div class="contenuto">
+        <!-- Pila ISO-OSI -->
+        <div class="home">
+            <div class="definizione">
+                <h1 id="iso-title"></h1>
+                <div class="container">
+                    <div class="text">
+                        <strong>DEFINIZIONE</strong>
+                        <p id="iso-definition"></p>
+                    </div>
+                </div>
+                <div class="alerts-container" id="iso-layers"></div>
+            </div>
+
+            <!-- Pila TCP-IP -->
+            <div class="definizione">
+                <h1 id="tcp-title"></h1>
+                <div class="container">
+                    <div class="text">
+                        <strong>DEFINIZIONE</strong>
+                        <p id="tcp-definition"></p>
+                    </div>
+                </div>
+                <div class="alerts-container" id="tcp-layers"></div>
+            </div>
+        </div>
+
+        <!-- Livello di trasporto -->
+        <div class="contenuto">
+            <h2 id="transport-title"></h2>
+            <h3 id="transport-subtitle"></h3>
+            <p id="transport-description"></p>
+            <a id="transport-link"></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-dark text-center py-3 mt-5" id="footer"></footer>
+
+    <!-- Script per caricare i contenuti dinamicamente -->
+    <script>
+        fetch('isoOsi.json')
+            .then(response => response.json())
+            .then(data => {
+                // Titolo della pagina
+                document.getElementById('page-title').innerText = data.title;
+
+                // Navbar
+                const navbar = document.getElementById('navbar');
+                data.navbar.forEach(item => {
+                    const link = document.createElement('a');
+                    link.href = item.href;
+                    link.innerText = item.text;
+                    navbar.appendChild(link);
+                });
+
+                // ISO-OSI
+                document.getElementById('iso-title').innerText = data.isoOsi.title;
+                document.getElementById('iso-definition').innerText = data.isoOsi.definition;
+                const isoLayers = document.getElementById('iso-layers');
+                data.isoOsi.layers.forEach(layer => {
+                    const div = document.createElement('div');
+                    div.classList.add('alert', layer.class);
+                    div.role = 'alert';
+                    div.innerText = layer.name;
+                    isoLayers.appendChild(div);
+                });
+
+                // TCP-IP
+                document.getElementById('tcp-title').innerText = data.tcpIp.title;
+                document.getElementById('tcp-definition').innerText = data.tcpIp.definition;
+                const tcpLayers = document.getElementById('tcp-layers');
+                data.tcpIp.layers.forEach(layer => {
+                    const div = document.createElement('div');
+                    div.classList.add('alert', layer.class);
+                    div.role = 'alert';
+                    div.innerText = layer.name;
+                    tcpLayers.appendChild(div);
+                });
+
+                // Livello di trasporto
+                document.getElementById('transport-title').innerText = data.transportLayer.title;
+                document.getElementById('transport-subtitle').innerText = data.transportLayer.subtitle;
+                document.getElementById('transport-description').innerText = data.transportLayer.description;
+                const transportLink = document.getElementById('transport-link');
+                transportLink.href = data.transportLayer.linkHref;
+                transportLink.innerText = data.transportLayer.linkText;
+
+                // Footer
+                document.getElementById('footer').innerText = data.footer;
+            });
+    </script>
+</body>
+</html>

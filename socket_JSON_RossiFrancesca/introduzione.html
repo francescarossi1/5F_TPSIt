@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title"></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Barra di navigazione -->
+    <div class="navbar sticky-top" id="navbar"></div>
+
+    <!-- Sezione contenuti -->
+    <div class="contenuto">
+        <div class="home">
+            <div class="definizione">
+                <h1 id="socket-title"></h1>
+                <div id="socket-paragraphs"></div>
+                <h2>Famiglie di Socket</h2>
+                <ul id="socket-families"></ul>
+                <h2>Tipi di Socket</h2>
+                <ul id="socket-types"></ul>
+                <img id="socket-image" class="cl-sr" alt="">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" id="socket-comparison"></div>
+        </div>
+
+        <h4 class="home" id="example-title"></h4>
+        <p class="home" id="example-description"></p>
+        <div class="connection">
+            <div class="row" id="example-images"></div>
+        </div>
+        <a href="glossario.html">Glossario dei termini</a>
+    </div>
+
+    <footer class="text-dark text-center py-3 mt-5" id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script>
+        fetch('introduzione.json')
+            .then(response => response.json())
+            .then(data => {
+                // Imposta il titolo della pagina
+                document.getElementById('page-title').innerText = data.title;
+
+                // Popola la navbar
+                const navbar = document.getElementById('navbar');
+                data.navbar.forEach(item => {
+                    const link = document.createElement('a');
+                    link.href = item.href;
+                    link.innerText = item.text;
+                    navbar.appendChild(link);
+                });
+
+                // Sezione definizione di socket
+                document.getElementById('socket-title').innerText = data.socketDefinition.title;
+                const paragraphs = document.getElementById('socket-paragraphs');
+                data.socketDefinition.paragraphs.forEach(paragraph => {
+                    const p = document.createElement('p');
+                    p.innerText = paragraph;
+                    paragraphs.appendChild(p);
+                });
+
+                const families = document.getElementById('socket-families');
+                data.socketDefinition.families.forEach(family => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<strong>${family.name}</strong>: ${family.description}`;
+                    families.appendChild(li);
+                });
+
+                const types = document.getElementById('socket-types');
+                data.socketDefinition.types.forEach(type => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<strong>${type.name}</strong>: ${type.description}`;
+                    types.appendChild(li);
+                });
+
+                const socketImage = document.getElementById('socket-image');
+                socketImage.src = data.socketDefinition.image.src;
+                socketImage.alt = data.socketDefinition.image.alt;
+
+                // Sezione confronto socket
+                const comparison = document.getElementById('socket-comparison');
+                data.socketComparison.forEach(item => {
+                    const col = document.createElement('div');
+                    col.classList.add('col');
+                    col.innerHTML = `<h2>${item.type}</h2><p>${item.description}</p>`;
+                    comparison.appendChild(col);
+                });
+
+                // Esempio connessione
+                document.getElementById('example-title').innerText = data.example.title;
+                document.getElementById('example-description').innerText = data.example.description;
+                const exampleImages = document.getElementById('example-images');
+                data.example.images.forEach(image => {
+                    const col = document.createElement('div');
+                    col.classList.add('col-md-6');
+                    col.innerHTML = `<img src="${image.src}" class="img-fluid" alt="${image.alt}">`;
+                    exampleImages.appendChild(col);
+                });
+
+                // Footer
+                document.getElementById('footer').innerText = data.footer;
+            });
+    </script>
+</body>
+</html>

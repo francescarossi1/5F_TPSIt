@@ -1,0 +1,46 @@
+{
+    "title": "Socket",
+    "navbar": [
+      { "text": "Home", "href": "index.html" },
+      { "text": "Introduzione", "href": "introduzione.html" },
+      { "text": "Pila Iso Osi e livello di trasporto", "href": "isoOsi.html" },
+      { "text": "TCP e UDP", "href": "tcpUdp.html" },
+      { "text": "Glossario", "href": "glossario.html" }
+    ],
+    "socketDefinition": {
+      "heading": "SOCKET",
+      "paragraph": "Una socket è un'interfaccia di comunicazione per lo scambio di dati tra dispositivi attraverso una rete.",
+      "image": "img/client-server.png",
+      "altText": "client-server"
+    },
+    "carouselImages": [
+      "img/pila.png",
+      "img/connessione.png",
+      "img/tcp.png",
+      "img/udp.png"
+    ],
+    "accordionItems": [
+      {
+        "title": "Introduzione",
+        "content": "Introduzione alle Socket con un esempio.",
+        "link": "introduzione.html"
+      },
+      {
+        "title": "Pila Iso-Osi e il livello di trasporto",
+        "content": "Descrizione della pila Iso-Osi e del livello di trasporto.",
+        "link": "isoOsi.html"
+      },
+      {
+        "title": "TCP e UDP",
+        "content": "Differenze tra TCP e UDP.",
+        "link": "tcpUdp.html"
+      },
+      {
+        "title": "Glossario",
+        "content": "Definizioni dei termini informatici.",
+        "link": "glossario.html"
+      }
+    ],
+    "footer": "Francesca Rossi - Classe 5F"
+  }
+  

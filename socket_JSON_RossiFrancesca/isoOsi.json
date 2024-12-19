@@ -1,0 +1,43 @@
+{
+    "title": "Socket",
+    "navbar": [
+      { "text": "Home", "href": "index.html" },
+      { "text": "Introduzione", "href": "introduzione.html" },
+      { "text": "Pila Iso Osi e livello di trasporto", "href": "isoOsi.html" },
+      { "text": "TCP e UDP", "href": "tcpUdp.html" },
+      { "text": "Glossario", "href": "glossario.html" }
+    ],
+    "isoOsi": {
+      "title": "Pila ISO-OSI",
+      "definition": "E' un modello concettuale che descrive come le comunicazioni tra sistemi di rete devono avvenire in modo strutturato e standardizzato.",
+      "layers": [
+        { "name": "7 Applicazione", "class": "alert-primary" },
+        { "name": "6 Presentazione", "class": "alert-secondary" },
+        { "name": "5 Sessione", "class": "alert-success" },
+        { "name": "4 Trasporto", "class": "alert-danger" },
+        { "name": "3 Rete", "class": "alert-warning" },
+        { "name": "2 Collegamento", "class": "alert-info" },
+        { "name": "1 Fisico", "class": "alert-dark" }
+      ]
+    },
+    "tcpIp": {
+      "title": "Pila TCP-IP",
+      "definition": "Transmission Control Protocol/Internet Protocol è un modello di riferimento simile al modello ISO/OSI, ma con meno strati. Viene utilizzato per gestire la comunicazione tra dispositivi in una rete, in particolare su Internet.",
+      "layers": [
+        { "name": "5 Applicazione", "class": "alert-success" },
+        { "name": "4 Trasporto", "class": "alert-danger" },
+        { "name": "3 Rete", "class": "alert-warning" },
+        { "name": "2 Collegamento", "class": "alert-info" },
+        { "name": "1 Fisico", "class": "alert-dark" }
+      ]
+    },
+    "transportLayer": {
+      "title": "Livello di trasporto",
+      "subtitle": "Layer 4",
+      "description": "Ha il compito di fornire il trasferimento affidabile dei dati tra gli host sorgente e destinazione all'interno di una rete. Gestisce principalmente i problemi di controllo degli errori, di sequenza e di flusso.",
+      "linkText": "Glossario dei termini",
+      "linkHref": "glossario.html"
+    },
+    "footer": "Francesca Rossi - Classe 5F"
+  }
+  

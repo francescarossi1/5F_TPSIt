@@ -1,0 +1,47 @@
+{
+    "title": "Socket",
+    "navbar": [
+      { "text": "Home", "href": "index.html" },
+      { "text": "Introduzione", "href": "introduzione.html" },
+      { "text": "Pila Iso Osi e livello di trasporto", "href": "isoOsi.html" },
+      { "text": "TCP e UDP", "href": "tcpUdp.html" },
+      { "text": "Glossario", "href": "glossario.html" }
+    ],
+    "socketDefinition": {
+      "title": "Socket",
+      "paragraphs": [
+        "Una socket è un'interfaccia di comunicazione tra 2 o più macchine...",
+        "Le socket sono utilizzate per creare connessioni tra client e server..."
+      ],
+      "families": [
+        { "name": "AF_INET", "description": "comunicazione tra host remoti..." },
+        { "name": "AF_UNIX", "description": "comunicazione tra processi locali..." }
+      ],
+      "types": [
+        { "name": "Stream socket", "description": "orientati alla connessione (TCP)..." },
+        { "name": "Datagram socket", "description": "non orientati alla connessione (UDP)..." },
+        { "name": "Raw socket", "description": "bypassa il livello di trasporto..." }
+      ],
+      "image": { "src": "img/client-server.png", "alt": "client-server" }
+    },
+    "socketComparison": [
+      {
+        "type": "SOCK_STREAM",
+        "description": "Utilizza il protocollo TCP. La connessione è affidabile..."
+      },
+      {
+        "type": "SOCK_DGRAM",
+        "description": "Utilizza il protocollo UDP. La connessione non è affidabile..."
+      }
+    ],
+    "example": {
+      "title": "Esempio connessione server-client",
+      "description": "Il codice del programma è stato realizzato con il linguaggio C.",
+      "images": [
+        { "src": "img/server.png", "alt": "Server" },
+        { "src": "img/client.png", "alt": "Client" }
+      ]
+    },
+    "footer": "Francesca Rossi - Classe 5F"
+  }
+  

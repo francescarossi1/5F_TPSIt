@@ -1,0 +1,38 @@
+{
+    "tcp": {
+      "title": "TCP (Transmission Control Protocol)",
+      "image": "img/tcp.png",
+      "description": "Il TCP è un protocollo orientato alla connessione...",
+      "features": [
+        "Affidabilità: Garantisce la consegna senza errori.",
+        "Pipelining: Gestisce la trasmissione per migliorare l'efficienza.",
+        "Controllo di flusso: Adatta la velocità di trasmissione.",
+        "Three-way Handshake: Connessione tramite SYN e ACK.",
+        "Chiusura della connessione: Usa il Four-way Handshake."
+      ],
+      "issues": [
+        "Duplicazione a causa di conflitti nei numeri di sequenza.",
+        "Ritardi o perdita di pacchetti per time-out e ritrasmissioni.",
+        "Possibile fallimento nel rilascio della connessione."
+      ],
+      "documentationLink": "https://www.ietf.org/rfc/rfc793.txt"
+    },
+    "udp": {
+      "title": "UDP (User Datagram Protocol)",
+      "image": "img/udp.png",
+      "description": "L'UDP è un protocollo connectionless, che non garantisce la consegna o l'ordine dei pacchetti...",
+      "features": [
+        "Non garantisce la consegna dei pacchetti.",
+        "I pacchetti possono arrivare fuori ordine.",
+        "Non esegue ritrasmissioni in caso di pacchetti persi.",
+        "Vulnerabile agli attacchi DDoS."
+      ],
+      "issues": [
+        "Non garantisce il controllo degli errori.",
+        "Pacchetti potrebbero arrivare fuori ordine.",
+        "Non ritrasmette pacchetti persi."
+      ],
+      "documentationLink": "https://datatracker.ietf.org/doc/html/rfc768"
+    }
+  }
+  

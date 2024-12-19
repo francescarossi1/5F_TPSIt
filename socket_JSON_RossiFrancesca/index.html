@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title id="page-title"></title> 
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+</head>
+<body>
+
+    <div class="navbar sticky-top" id="navbar"></div> <!-- Barra di navigazione sticky -->
+    
+    <div class="contenuto">
+        <!-- Sezione definizione della socket (client-server) -->
+        <div class="home">
+            <div class="definizione">
+                <h1 id="socket-heading"></h1> <!-- Titolo dinamico della definizione -->
+                <p id="socket-paragraph"></p> <!-- Descrizione dinamica della definizione -->
+            </div>
+            <img id="socket-image" class="cl-sr" alt="client-server"> <!-- Immagine dinamica -->
+        </div>
+
+        <!-- Carousel Bootstrap per immagini -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carousel-items"></div> <!-- Contenitore per le immagini del carousel -->
+            <!-- Bottoni di navigazione del carousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Sezione collegamenti con un accordion per navigazione -->
+    <div class="collegamenti">
+        <h2>Naviga tra le pagine</h2>
+        <div class="accordion" id="accordionExample"></div> <!-- Accordion per i collegamenti -->
+    </div>
+
+    <!-- Footer della pagina -->
+    <footer class="text-dark text-center py-3 mt-5" id="footer"></footer> <!-- Footer dinamico -->
+
+    <!-- Script Bootstrap per il funzionamento delle componenti (carousel, accordion, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Carica i dati dal file JSON per popolare la pagina
+        fetch('index.json')
+            .then(response => response.json()) // Converte la risposta in un oggetto JSON
+            .then(data => {
+                // Imposta dinamicamente il titolo della pagina
+                document.getElementById('page-title').innerText = data.title;
+
+                // Crea e aggiunge i link alla navbar
+                const navbar = document.getElementById('navbar');
+                data.navbar.forEach(item => {
+                    const link = document.createElement('a');
+                    link.href = item.href;
+                    link.innerText = item.text;
+                    navbar.appendChild(link);
+                });
+
+                // Imposta il contenuto della sezione socket (definizione client-server)
+                document.getElementById('socket-heading').innerText = data.socketDefinition.heading;
+                document.getElementById('socket-paragraph').innerText = data.socketDefinition.paragraph;
+                document.getElementById('socket-image').src = data.socketDefinition.image;
+                document.getElementById('socket-image').alt = data.socketDefinition.altText;
+
+                // Aggiunge le immagini al carousel
+                const carouselItems = document.getElementById('carousel-items');
+                data.carouselImages.forEach((image, index) => {
+                    const item = document.createElement('div');
+                    item.classList.add('carousel-item');
+                    if (index === 0) item.classList.add('active'); // Imposta l'immagine attiva
+                    const img = document.createElement('img');
+                    img.src = image;
+                    img.classList.add('d-block', 'w-100');
+                    item.appendChild(img);
+                    carouselItems.appendChild(item);
+                });
+
+                // Crea e aggiunge gli item all'accordion
+                const accordion = document.getElementById('accordionExample');
+                data.accordionItems.forEach(item => {
+                    const accordionItem = document.createElement('div');
+                    accordionItem.classList.add('accordion-item');
+                    const header = document.createElement('h2');
+                    header.classList.add('accordion-header');
+                    const button = document.createElement('button');
+                    button.classList.add('accordion-button');
+                    button.setAttribute('type', 'button');
+                    button.setAttribute('data-bs-toggle', 'collapse');
+                    button.setAttribute('data-bs-target', `#collapse${item.title}`);
+                    button.innerHTML = `<strong>${item.title}</strong>`;
+                    header.appendChild(button);
+                    const collapseDiv = document.createElement('div');
+                    collapseDiv.classList.add('accordion-collapse', 'collapse');
+                    collapseDiv.setAttribute('id', `collapse${item.title}`);
+                    const body = document.createElement('div');
+                    body.classList.add('accordion-body');
+                    body.innerHTML = `${item.content} <a href="${item.link}">Scopri di più</a>`;
+                    collapseDiv.appendChild(body);
+                    accordionItem.appendChild(header);
+                    accordionItem.appendChild(collapseDiv);
+                    accordion.appendChild(accordionItem);
+                });
+
+                // Imposta il contenuto del footer
+                document.getElementById('footer').innerText = data.footer;
+            });
+    </script>
+</body>
+</html>

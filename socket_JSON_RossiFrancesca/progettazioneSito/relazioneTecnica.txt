@@ -1,0 +1,50 @@
+
+Relazione Tecnica sul Sito HTML sulle Socket
+
+1. Introduzione
+Questo progetto consiste nella realizzazione di un sito web  che fornisce una panoramica sui concetti
+fondamentali di networking, come socket, TCP e UDP. L'obiettivo è creare una piattaforma 
+che unisca estetica e funzionalità per offrire un'esperienza utente dinamica e informativa.
+
+Il sito utilizza HTML, CSS e JavaScript, integrando JSON per la gestione dinamica dei contenuti e Bootstrap per il design responsivo.
+
+2. Struttura del Sito
+Il sito è composto da diverse sezioni principali, ciascuna rappresentata da una pagina dedicata:
+
+Homepage (index.html): Introduzione generale al tema e collegamenti alle altre pagine.
+Introduzione (introduzione.html): Spiegazione preliminare sulle reti e sul concetto di socket.
+Pila ISO/OSI (isoOsi.html): Descrizione della pila ISO/OSI e dei livelli di trasporto.
+TCP e UDP (tcpUdp.html): Approfondimento sui protocolli di trasporto TCP e UDP, con le loro caratteristiche e differenze.
+Glossario (glossario.html): Glossario interattivo con termini chiave, dinamicamente generati da un file JSON.
+
+3. Aspetti Tecnici
+HTML
+Struttura semantica che utilizza elementi come <header>, <main>, <footer> e <div> per una chiara organizzazione.
+Collegamenti interni tramite il tag <a> per la navigazione tra le pagine.
+CSS
+Personalizzazione dello stile tramite un foglio di stile esterno (style.css).
+Uso di classi specifiche per garantire uniformità nell'aspetto delle pagine.
+Bootstrap
+Framework CSS utilizzato per rendere il sito responsivo e migliorare il layout.
+Componenti come griglie (row, col-*) e card per presentare i contenuti in modo chiaro e accattivante.
+JavaScript
+Generazione dinamica delle card nella pagina del glossario.
+Utilizzo di fetch per caricare i dati da un file JSON esterno.
+JSON
+Gestione centralizzata dei contenuti tramite un file JSON (data.json), che contiene titoli, descrizioni e collegamenti delle definizioni.
+Facilità di aggiornamento e modularità del sistema.
+
+4. Funzionalità
+Navigazione Intuitiva:
+Barra di navigazione fissa con collegamenti alle pagine principali.
+Contenuti Dinamici:
+Il glossario genera automaticamente le definizioni usando JavaScript e dati JSON.
+Design Responsivo:
+Ottimizzato per dispositivi desktop e mobili grazie a Bootstrap.
+Accessibilità:
+Struttura semantica e design semplice garantiscono una buona esperienza utente.
+
+5. Vantaggi del Design Dinamico
+Flessibilità: Aggiungere nuovi termini o pagine richiede solo l'aggiornamento del file JSON.
+Scalabilità: Il sito può essere facilmente esteso con nuovi contenuti.
+Efficienza: Riduzione del codice duplicato grazie alla generazione automatica dei contenuti.

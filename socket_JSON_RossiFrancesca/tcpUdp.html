@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket</title>
+    <!-- Link al foglio di stile esterno -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Barra di navigazione -->
+    <div class="navbar sticky-top">
+        <a href="index.html">Home</a>
+        <a href="introduzione.html">Introduzione</a>
+        <a href="isoOsi.html">Pila Iso Osi e livello di trasporto</a>
+        <a href="tcpUdp.html">TCP e UDP</a>
+        <a href="glossario.html">Glossario</a>
+    </div>
+
+    <!-- Sezione contenuti -->
+    <div class="contenuto">
+        <div class="home">
+            <!-- Descrizione generale -->
+            <div class="definizione">
+                <h1>TCP e UDP</h1>
+                <p>Una socket è un'interfaccia di comunicazione che consente lo scambio di dati tra dispositivi attraverso una rete...</p>
+            </div>
+        </div>
+
+        <!-- Intestazione -->
+        <header class="intestazione">
+            <h1>Protocollo TCP e UDP:</h1>
+            <h2>Caratteristiche e Differenze</h2>
+        </header>
+
+        <!-- Sezioni dinamiche TCP e UDP -->
+        <div id="tcp-section" class="content-box"></div>
+        <div id="udp-section" class="content-box"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-dark text-center py-3 mt-5">
+        <p class="mb-0">Francesca Rossi - Classe 5F</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <!-- Script dinamico -->
+    <script>
+        // Funzione per generare una sezione dinamica
+        function createSection(data, sectionId) {
+            const section = document.getElementById(sectionId);
+
+            let htmlContent = `
+                <h2 class="section-title">${data.title}</h2>
+                <img src="${data.image}" alt="${data.title}" class="${sectionId}-image">
+                <p>${data.description}</p>
+                <ul class="list-group">
+                    ${data.features.map(feature => `<li class="list-group-item">${feature}</li>`).join('')}
+                </ul>
+                <h3>Problemi del protocollo</h3>
+                <ul class="list-group">
+                    ${data.issues.map(issue => `<li class="list-group-item">${issue}</li>`).join('')}
+                </ul>
+                <a href="${data.documentationLink}" target="_blank">Leggi la documentazione</a>
+            `;
+
+            section.innerHTML = htmlContent;
+        }
+
+        // Caricamento del JSON
+        fetch('tcpUdp.json')
+            .then(response => response.json())
+            .then(data => {
+                createSection(data.tcp, 'tcp-section');
+                createSection(data.udp, 'udp-section');
+            })
+            .catch(error => console.error('Errore nel caricamento del JSON:', error));
+    </script>
+</body>
+</html>

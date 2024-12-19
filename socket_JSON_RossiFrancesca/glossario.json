@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Socket",
+        "description": "Una socket è un'interfaccia di comunicazione che consente lo scambio di dati tra dispositivi attraverso una rete.",
+        "link": "index.html"
+    },
+    {
+        "title": "Client",
+        "description": "Un dispositivo che richiede servizi da un altro dispositivo o applicazione, chiamato server.",
+        "link": "index.html"
+    },
+    {
+        "title": "Server",
+        "description": "Un dispositivo che fornisce servizi a altri dispositivi o applicazioni chiamati client.",
+        "link": "index.html"
+    },
+    {
+        "title": "TCP",
+        "description": "Transmission Control Protocol (TCP), che fornisce un servizio di trasporto affidabile.",
+        "link": "tcpUdp.html"
+    },
+    {
+        "title": "UDP",
+        "description": "User Datagram Protocol, un servizio di trasporto non affidabile, orientato al datagramma.",
+        "link": "tcpUdp.html"
+    }
+]

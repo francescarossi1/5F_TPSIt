@@ -1,0 +1,39 @@
+<div class="contenuto">
+    <!-- Sezione iniziale della home con il titolo e una breve descrizione -->
+    <div class="home">
+        <div class="definizione">
+            <h1>Glossario dei termini</h1>
+            <p>Definizioni delle parole-chiave in informatica!</p>
+        </div>
+    </div>
+
+    <!-- Contenitore dinamico per le card generate dal file JSON -->
+    <div class="row" id="card-container">
+        <!-- Le card verranno inserite dinamicamente via JavaScript -->
+    </div>
+</div>
+
+<script>
+    // Carica i dati dal file JSON e genera le card dinamicamente
+    fetch('glossario.json') // Recupera il file glossario.json
+        .then(response => response.json()) // Converte la risposta in un oggetto JSON
+        .then(data => {
+            const container = document.getElementById('card-container'); // Seleziona il contenitore per le card
+            data.forEach(item => {
+                // Crea una card per ogni elemento nel JSON
+                const card = `
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">${item.title}</h5> <!-- Titolo della card -->
+                                <p class="card-text">${item.description}</p> <!-- Descrizione della card -->
+                                <a href="${item.link}" class="card-link">Scopri di più</a> <!-- Link aggiuntivo -->
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += card; // Aggiunge la card al contenitore
+            });
+        })
+        .catch(error => console.error('Errore nel caricamento dei dati:', error)); // Gestione degli errori
+</script>
